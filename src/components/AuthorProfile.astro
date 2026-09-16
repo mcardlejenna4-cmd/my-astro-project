@@ -4,7 +4,7 @@ import type { CollectionEntry } from 'astro:content';
 
 type Props = CollectionEntry<'authors'>['data'];
 
-const { name, bio, avatar, links } = Astro.props;
+const { name, bio, avatar, links = [] } = Astro.props;
 ---
 
 <section class="author-profile" aria-labelledby="author-heading">
@@ -15,7 +15,7 @@ const { name, bio, avatar, links } = Astro.props;
 		<p>{bio}</p>
 		<nav aria-label={`${name}'s social links`}>
 			<ul>
-				{links.map((link) => (
+				{links?.map((link) => (
 					<li><a href={link.url} rel="me">{link.label}</a></li>
 				))}
 			</ul>
