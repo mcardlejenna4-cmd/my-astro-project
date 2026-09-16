@@ -7,15 +7,15 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import AuthorProfile from '../components/AuthorProfile.astro';
 
-type Props = CollectionEntry<'blog'>['data'] & {
-	author: CollectionEntry<'authors'>['data'];
+	type Props = Omit<CollectionEntry<'blog'>['data'], 'author'> & {
+	author?: string;
+	authorProfile?: CollectionEntry<'authors'>['data'];
 };
 
-const { title, description, pubDate, updatedDate, heroImage, author } = Astro.props;
+const { title, description, pubDate, updatedDate, heroImage, authorProfile } = Astro.props;
 ---
 
 <html lang="en">
-					<AuthorProfile {...author} />
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -82,6 +82,7 @@ const { title, description, pubDate, updatedDate, heroImage, author } = Astro.pr
 						<hr />
 					</div>
 					<slot />
+					{authorProfile && <AuthorProfile {...authorProfile} />}
 				</div>
 			</article>
 		</main>
