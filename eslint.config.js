@@ -9,5 +9,14 @@ export default [
       // override/add rules settings here, such as:
       // "astro/no-set-html-directive": "error"
     },
+    "settings": {
+    "import/core-modules": ["astro:content", "astro:transitions"],
+    "import/parsers": {
+      "astro-eslint-parser": [".astro"],
+      "espree": [".js", ".mjs", ".cjs"],
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    }
+  }
+  
   },
 ]
