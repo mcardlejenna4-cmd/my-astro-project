@@ -2,7 +2,7 @@ import eslintPluginAstro from "eslint-plugin-astro";
 
 export default [
   {
-    ignores: ["**/cdk/**", "**/cdk.out/**"],
+    ignores: ["**/cdk/**", "**/cdk.out/**", "node_modules", "dist", ".astro"]
   },
   ...eslintPluginAstro.configs.recommended,
   {
