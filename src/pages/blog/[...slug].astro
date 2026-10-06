@@ -1,24 +1,32 @@
 ---
-import { type CollectionEntry, getCollection, getEntry, render } from 'astro:content';
+import { getEntry, render } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
-export async function getStaticPaths() {
-	const posts = await getCollection('blog');
-	return posts.map((post) => ({
-		params: { slug: post.id },
-		props: post,
-	}));
-}
-type Props = CollectionEntry<'blog'>;
+// 1. Get the dynamic route parameter from the URL
+const { slug } = Astro.params;
 
-const post = Astro.props;
+if (!slug) {
+  return Astro.redirect('/404');
+}
+
+// 2. Fetch the blog post dynamically on demand
+const post = await getEntry('blog', slug);
+
+// Handle 404 if the post slug doesn't exist
+if (!post) {
+  return Astro.redirect('/404');
+}
+
+// 3. Fetch the corresponding author entry
 const author = await getEntry('authors', post.data.author);
 if (!author) {
-	throw new Error(`Author not found: ${post.data.author}`);
+  throw new Error(`Author not found: ${post.data.author}`);
 }
+
+// 4. Render the Markdown/MDX content
 const { Content } = await render(post);
 ---
 
 <BlogPost {...post.data} authorProfile={author.data}>
-	<Content />
+  <Content />
 </BlogPost>

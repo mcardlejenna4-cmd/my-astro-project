@@ -3,8 +3,8 @@
     {
       "type": "aws:cdk:creationStack",
       "data": [
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:20:2)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)",
+        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:4:3)",
         "...node internals, tsx..."
       ]
     }
@@ -119,9 +119,9 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Bucket2 in aws-cdk-lib...",
-        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\cdk-stack.ts:12:24)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:20:2)",
+        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\static-site-stack.ts:2:1608)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)",
+        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:4:3)",
         "...node internals, tsx..."
       ]
     },
@@ -181,9 +181,9 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Distribution2 in aws-cdk-lib...",
-        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\cdk-stack.ts:17:26)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:20:2)",
+        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\static-site-stack.ts:2:1725)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)",
+        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:4:3)",
         "...node internals, tsx..."
       ]
     }
@@ -309,8 +309,8 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\cdk-stack.ts:24:5)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)"
+        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\static-site-stack.ts:2:1895)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)"
       ]
     }
   ],
@@ -344,9 +344,9 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Bucket2 in aws-cdk-lib...",
-        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\cdk-stack.ts:12:24)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:20:2)"
+        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\static-site-stack.ts:2:1608)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)",
+        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:4:3)"
       ]
     },
     {
@@ -384,9 +384,9 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\cdk-stack.ts:24:5)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:20:2)",
+        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\static-site-stack.ts:2:1895)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)",
+        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:4:3)",
         "...node internals..."
       ]
     }
@@ -406,9 +406,9 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new BucketDeployment2 in aws-cdk-lib...",
-        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\cdk-stack.ts:24:5)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:20:2)",
+        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\static-site-stack.ts:2:1895)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)",
+        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:4:3)",
         "...node internals, tsx..."
       ]
     }
@@ -500,9 +500,9 @@
       "type": "aws:cdk:creationStack",
       "data": [
         "...new Distribution2 in aws-cdk-lib...",
-        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\cdk-stack.ts:17:26)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:6:1)",
-        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:20:2)"
+        "new StaticSiteStack (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\lib\\static-site-stack.ts:2:1725)",
+        "C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:9 (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:3:94)",
+        "<anonymous> (C:\\Users\\mcard\\OneDrive\\Documents\\CS4421\\Lab\\my-astro-blog\\cdk\\bin\\cdk.ts:4:3)"
       ]
     }
   ],
