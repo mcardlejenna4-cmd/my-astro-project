@@ -34,7 +34,7 @@ Fold in the remaining flour, 1 tsp baking powder and 2 mashed bananas.
 ### Step 4:
 Pour the mixture into the prepared tin and bake for about 50 mins, or until cooked through. Check the loaf at 5-min intervals from around 30-40 mins in the oven by testing it with a skewer (it should be able to be inserted and removed cleanly), as the time may vary depending on the shape of your loaf tin.
 
-1[Freshly baked banana bread loaf](./homemade-banana-bread.jpg)
+![Freshly baked banana bread loaf](./homemade-banana-bread.jpg)
 
 ### Step 5:
 Cool in the tin for 10 mins, then remove to a wire rack.
