@@ -46,6 +46,7 @@ export class EcsStack extends cdk.Stack {
 
     const logGroup = new logs.LogGroup(this, 'ApplicationLogs', {
       retention: logs.RetentionDays.ONE_WEEK,
+      logGroupName: '/aws/ecs/ecs-stack',
       removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
