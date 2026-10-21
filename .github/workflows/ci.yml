@@ -33,3 +33,9 @@ jobs:
             npm run lint
             npm run check
             npm run test:unit
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Run BDD Acceptance Tests (Cucumber + Playwright)
+        run: npm run test:bdd:ci
