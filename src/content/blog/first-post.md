@@ -2,7 +2,7 @@
 title: 'Recipe for Banana Bread'
 description: 'Have some overripe bananas? Put them to good use! Make this cosy banana bread and make all your friends jealous!'
 pubDate: '29 Sept 2026'
-heroImage: '../../assets/blog-placeholder-3.jpg'
+heroImage: './homemade-banana-bread.jpg'
 author: 'mary-murphy'
 ---
 
