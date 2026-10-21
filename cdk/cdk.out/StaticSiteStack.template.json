@@ -205,6 +205,21 @@
     "aws:asset:property": "Code"
    }
   },
+  "IndexRewriteFunction5FE40237": {
+   "Type": "AWS::CloudFront::Function",
+   "Properties": {
+    "AutoPublish": true,
+    "FunctionCode": "\nfunction handler(event) {\n  var request = event.request;\n  var uri = request.uri;\n  if (uri.endsWith('/')) {\n    request.uri += 'index.html';\n  } else if (!uri.split('/').pop().includes('.')) {\n    request.uri += '/index.html';\n  }\n  return request;\n}\n",
+    "FunctionConfig": {
+     "Comment": "us-east-1StaticSiteStackIxRewriteFunctionB2656B86",
+     "Runtime": "cloudfront-js-2.0"
+    },
+    "Name": "us-east-1StaticSiteStackIxRewriteFunctionB2656B86"
+   },
+   "Metadata": {
+    "aws:cdk:path": "StaticSiteStack/IndexRewriteFunction/Resource"
+   }
+  },
   "SiteDistributionOrigin1S3OriginAccessControl7D960FE6": {
    "Type": "AWS::CloudFront::OriginAccessControl",
    "Properties": {
@@ -226,6 +241,17 @@
      "DefaultCacheBehavior": {
       "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6",
       "Compress": true,
+      "FunctionAssociations": [
+       {
+        "EventType": "viewer-request",
+        "FunctionARN": {
+         "Fn::GetAtt": [
+          "IndexRewriteFunction5FE40237",
+          "FunctionARN"
+         ]
+        }
+       }
+      ],
       "TargetOriginId": "StaticSiteStackSiteDistributionOrigin1C67BD595",
       "ViewerProtocolPolicy": "allow-all"
      },
@@ -288,7 +314,7 @@
      "cdk-hnb659fds-assets-835597621378-us-east-1"
     ],
     "SourceObjectKeys": [
-     "10df9e964605b4d3b670af9bfaa9b12cd3f2978b27d6d69e4903346ed4e94ea5.zip"
+     "77067b1023b2981addcd422523d7b1ddd0cf047703956d75f9526aa6a270f6dc.zip"
     ],
     "DestinationBucketName": {
      "Ref": "SiteBucket397A1860"
@@ -486,7 +512,7 @@
   "CDKMetadata": {
    "Type": "AWS::CDK::Metadata",
    "Properties": {
-    "Analytics": "v2:deflate64:H4sIAAAAAAAA/9VUTW/bMAz9LdWxULUtAbYhtyTdhgHdWiTFLkEQKBLjqJXFQB/JPMP/fZBsuV7bFcVuOwSO+R71+GiKIzb6MGJvz/jJXQh5f6HVltVLz8U95Se3qd2Y1bMg7sGvamKhxCPXN6iVqMiESHDeYkUo4cHjJWjwcL29A+EdmXgboFnT+c70+aX6qQyZkKFYVHFjliDHWur0yWnNmrZQq72qyTa9kgk5J0OVHn+tVpuw9NxDCWYoNeMOVuSc0O63bqjQGOTOovGsvlTOW7UNXqFZ1UTCjgftZ7DnR4WWTGqCVhWphnPS0ExYIPrWVa59Ob5OxKkQ4Nwcjbeoo3Cy9QwWw0P1hrrxppZw0FhFD52zyz5AuXPgHZvGR0M1L7eSs3q+M1e8AvsDrFNo6FKZQoNH8zkY0dkKQclUKCXcir3yIHyw0IV0THdk0lZLwByVRRMle0KUugn2gC4neVUChsywqDNQQom2WqpfOQCHPZRguV56tLyAAXQ8iId/y7A1EGcuBRyIYJWvvlgMhxzcKQ2uch7KXBkWidC9CpT56D03UoPN9QUTC+6+Yk24lN/Ac8k9b33TOOjr56E0NWs66Oe/NPG/b9inoaWHxrTg1dB+e5VzvxqqeMnqBWqIrXMulCBnVbxbB6uMUAeup0Jg6FvVcmLCNJ2QL1/JDS9ApsuuIKrVf8Sqqe24uaxbvMkSed+t6g71nov9V6OVgR7rHb0Ivnzu39HUlmiLdgsuus1it7hIM/GohqdhKQd7bij72nAqo62goRoLx+qrbixWdT8h33n+/ImfGU1D58F5LBfgMFjRL9fWXBd8xLmxeFQSbFzGNO2vpeeFMkW3xTbp9mz4yQmt2PTk5lqliWptGJTA7tyb4+g9+8jend05pS66CWWL9vkbqw6lxwMHAAA="
+    "Analytics": "v2:deflate64:H4sIAAAAAAAA/9VVTW8aMRD9LfGxMtsWpLbiBqStKqUNgqgXhJCxB3Di9VCPDd2u9r9X9n5km6RR1FsPaJd5M35vHuNhmA3fD7M3F+JMA6nuBkZvs3Lphbzj4kybkkZZOQ3yDvyqZA5yPAkzR6NlwcZMAXmHBeNMBI+XYMDD9fYWpCc29i5Ateazne3qc/1TWzZmfbLIQqMsQZTVqZNHp1VrXkM196pk2/SVjdkr1mfp8Jdy1QVLLzzkYPtUU0GwYq8Ybz7rikuDQe0cWp+Vn4KVXqONvgTrdQ5JDGcSFfR0tXn8UpN3ehuaIgU7EYyfwkGcNDo2Lhk6vU+i4zG7pm5ChFKL+EpsvCo7oMmDE1h/Uxwj50nDGdzAwY8A5Fm1rnjLs0D0tZuttuXoOvFNpASiGVrv0MSGk+wnsBjuN1FxGm1KBUeDRfSucfSyC3BBBJ6ySXxU3Ih8q0RWznb2ShTgvoOjaMxS270Bj7ZnaQhaNQ0KJw/ag/TBtRabWB7dSGoZ2JN2aCNllxCp5sEdkdqi+BNhaDMcmhbIIUdXLPWvNgDHA+TghFl6dGIPPeh0lPdvy7C1EGc9BQhkcNoXnx2GYxvcaQNUkIe8VYb7lPBwWDg7CKsMuFZfb6YqXjKh1FfwQgkv6r55vGDrp6E0rWve8/NfTPzvDfvYb+nemBq86rf/51WtuBZ5Vi7QQLSOKOSgpkW8okenrdRHYSZSYuisqnNiweT+blac5cKKPai0ZDTU97cfKyauyW1l3eC8pWj37KpsUO+FPHyxRlvosK6jZ8Hnz/07mmyJbfFmscZuW7IbXKSZeKDhcVip3n7t0740nGTUCipucE9ZedWMxarsJuSbyPuLt82oKj4L5DFfAGFwslvqdXNN8EHO3OFJK3DxT4Cn/bX0Yq/tvtlim3R7NuJM0uhscqaZ0Wmi6jYsKshu6fVp+C77kL29uCWtB82EZov6+RvxNaXlewcAAA=="
    },
    "Metadata": {
     "aws:cdk:path": "StaticSiteStack/CDKMetadata/Default"

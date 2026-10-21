@@ -18,7 +18,7 @@
         "validateOnSynth": false,
         "assumeRoleArn": "arn:${AWS::Partition}:iam::835597621378:role/cdk-hnb659fds-deploy-role-835597621378-us-east-1",
         "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::835597621378:role/cdk-hnb659fds-cfn-exec-role-835597621378-us-east-1",
-        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-835597621378-us-east-1/cd8843c158376925ba6406da3b707f90fc1de8f636983b5fede33c5076ce552e.json",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-835597621378-us-east-1/951e690e09db0039a659e6c72253582f08825a89b39e02876191bd74e91ca802.json",
         "requiresBootstrapStackVersion": 6,
         "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
         "additionalDependencies": [
@@ -35,6 +35,41 @@
       ],
       "additionalMetadataFile": "StaticSiteStack.metadata.json",
       "displayName": "StaticSiteStack"
+    },
+    "EcrStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "EcrStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "EcrStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://835597621378/us-east-1",
+      "properties": {
+        "templateFile": "EcrStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::835597621378:role/cdk-hnb659fds-deploy-role-835597621378-us-east-1",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::835597621378:role/cdk-hnb659fds-cfn-exec-role-835597621378-us-east-1",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-835597621378-us-east-1/e4d4ccbfe575e23f142652a410fd3a12e79b08376629facfdc2318610826d3ca.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "EcrStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::835597621378:role/cdk-hnb659fds-lookup-role-835597621378-us-east-1",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "EcrStack.assets"
+      ],
+      "additionalMetadataFile": "EcrStack.metadata.json",
+      "displayName": "EcrStack"
     },
     "Tree": {
       "type": "cdk:tree",
