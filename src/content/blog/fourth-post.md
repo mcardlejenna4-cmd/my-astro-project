@@ -29,6 +29,8 @@ Line the pastry with baking parchment and baking beans. Bake for 15 minutes, the
 ### Step 3:
 Meanwhile, warm the olive oil in a pan over medium heat. Cook the finely sliced onion for 5 minutes until soft, then add the spinach and stir until wilted. Set aside to cool slightly.
 
+![Spinach and feta quiche photo](./Spinach.Feta.Quiche.jpg)
+
 ### Step 4:
 Whisk the eggs and cream in a bowl. Season with the nutmeg, salt and black pepper.
 

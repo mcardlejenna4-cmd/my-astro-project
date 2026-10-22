@@ -31,6 +31,8 @@ Whisk the sugar, eggs and vanilla in a large bowl until pale and slightly thicke
 ### Step 4:
 Pour in the melted chocolate mixture and stir until combined. Sift in the flour, cocoa powder and salt, then fold gently until no dry streaks remain.
 
+![Photo of brownies](./Fudgy.Brownies.jpg)
+
 ### Step 5:
 Pour the batter into the prepared tin and bake for 22-27 minutes. The top should be set and a skewer inserted into the centre should come out with a few moist crumbs.
 

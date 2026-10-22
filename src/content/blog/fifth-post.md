@@ -29,6 +29,8 @@ Arrange the tomatoes, cucumber and red onion in a serving bowl. Add the Kalamata
 ### Step 3:
 Whisk the olive oil, red wine vinegar and oregano together. Season lightly with salt and black pepper.
 
+![Feta greek salad photo](./Greek.Salad2.jpg)
+
 ### Step 4:
 Pour the dressing over the vegetables and toss gently to coat.
 
