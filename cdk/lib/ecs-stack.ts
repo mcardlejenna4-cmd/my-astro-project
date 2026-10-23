@@ -75,6 +75,9 @@ export class EcsStack extends cdk.Stack {
       },
     });
 
+    // ALLOW PUBLIC INBOUND HTTP TRAFFIC ON PORT 80
+    service.loadBalancer.connections.allowFromAnyIpv4(ec2.Port.tcp(80), 'Allow public HTTP access');
+
     service.targetGroup.configureHealthCheck({
       path: '/api/health',
       healthyThresholdCount: 2,
