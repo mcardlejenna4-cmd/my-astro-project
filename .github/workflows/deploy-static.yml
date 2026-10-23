@@ -3,6 +3,8 @@ name: Deploy Static Site via AWS CDK
 on:
   push:
     branches: [main]
+  pull_request:
+    branches: [main]
 
 jobs:
   deploy:
