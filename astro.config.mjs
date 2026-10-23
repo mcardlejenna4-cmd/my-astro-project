@@ -10,6 +10,9 @@ import node from '@astrojs/node';
 export default defineConfig({
   site: 'https://example.com',
   output: 'server',
+    build: {
+    format: 'file', // Generates html files like /blog.html instead of /blog/index.html
+  },
   integrations: [mdx(), sitemap()],
 
   fonts: [
