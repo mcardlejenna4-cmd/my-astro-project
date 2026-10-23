@@ -9,7 +9,7 @@ import node from '@astrojs/node';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://example.com',
-  output: 'static',
+  output: 'server',
     build: {
     format: 'file', // Generates html files like /blog.html instead of /blog/index.html
   },
