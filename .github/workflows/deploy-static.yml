@@ -29,7 +29,6 @@ jobs:
         run: npm run build
 
       - name: Configure AWS Credentials
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
         uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
