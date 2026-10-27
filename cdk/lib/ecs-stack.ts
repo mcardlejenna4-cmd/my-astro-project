@@ -45,9 +45,9 @@ export class EcsStack extends cdk.Stack {
     });
 
     const logGroup = new logs.LogGroup(this, 'ApplicationLogs', {
-      retention: logs.RetentionDays.ONE_WEEK,
       logGroupName: '/aws/ecs/ecs-stack',
-      removalPolicy: cdk.RemovalPolicy.DESTROY,
+      retention: logs.RetentionDays.ONE_WEEK,
+     removalPolicy: cdk.RemovalPolicy.DESTROY,
     });
 
     const certificate = props.certificateArn
@@ -63,9 +63,9 @@ export class EcsStack extends cdk.Stack {
       minHealthyPercent: 100,
       circuitBreaker: { rollback: true },
       healthCheck: {
-        command: ['CMD-SHELL', 'wget --no-verbose --tries=1 --spider http://localhost:4321/api/health/live || exit 1'],
-        timeout: cdk.Duration.seconds(3),
-        startPeriod: cdk.Duration.seconds(30),
+       command: ['CMD-SHELL', 'wget --no-verbose --tries=1 --spider http://127.0.0.1:4321/api/health || exit 1'],
+       timeout: cdk.Duration.seconds(3),
+       startPeriod: cdk.Duration.seconds(30),
       },
       taskImageOptions: {
         image: ecs.ContainerImage.fromEcrRepository(props.repository, imageTag.valueAsString),
@@ -75,8 +75,11 @@ export class EcsStack extends cdk.Stack {
       },
     });
 
+    // ALLOW PUBLIC INBOUND HTTP TRAFFIC ON PORT 80
+    service.loadBalancer.connections.allowFromAnyIpv4(ec2.Port.tcp(80), 'Allow public HTTP access');
+
     service.targetGroup.configureHealthCheck({
-      path: '/api/health/ready',
+      path: '/api/health',
       healthyThresholdCount: 2,
       unhealthyThresholdCount: 3,
     });

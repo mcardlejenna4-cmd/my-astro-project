@@ -18,11 +18,17 @@ export class StaticSiteStack extends cdk.Stack {
 function handler(event) {
   var request = event.request;
   var uri = request.uri;
-  if (uri.endsWith('/')) {
-    request.uri += 'index.html';
-  } else if (!uri.split('/').pop().includes('.')) {
-    request.uri += '/index.html';
+  if (uri === '/') {
+    request.uri = '/index.html';
+    return request;
   }
+  if (uri.endsWith('/')) {
+    uri = uri.slice(0, -1);
+  }
+  if (!uri.split('/').pop().includes('.')) {
+    uri += '.html';
+  }
+  request.uri = uri;
   return request;
 }
 `),
@@ -38,8 +44,12 @@ function handler(event) {
       defaultRootObject: 'index.html',
     });
 
+    new cdk.CfnOutput(this, 'CloudFrontDomainName', {
+      value: distribution.distributionDomainName,
+    });
+
     new s3deploy.BucketDeployment(this, 'DeploySite', {
-      sources: [s3deploy.Source.asset('./../dist')],
+      sources: [s3deploy.Source.asset('./../dist/client')],
       destinationBucket: siteBucket,
       distribution,
       distributionPaths: ['/*'], // Automatic CloudFront CDN cache invalidation!

@@ -1,0 +1,23 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+export const prerender = true;
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`Page not found | ${SITE_TITLE}`} description="This page does not exist." />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Page not found</h1>
+			<p>Sorry, that page doesn't exist. <a href="/">Go back home</a>.</p>
+		</main>
+		<Footer />
+	</body>
+</html>
